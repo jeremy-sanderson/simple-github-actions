@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - .github/workflows/env-manipulation.yaml
+  workflow_dispatch:
 
 jobs:
   simple-date:
