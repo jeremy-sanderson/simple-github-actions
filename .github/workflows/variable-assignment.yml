@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Environment variable tests
 
 # Controls when the workflow will run
 on:
@@ -17,9 +17,11 @@ on:
         default: '42'
     
   repository_dispatch:
+    types: env
     
 env:
   NAME: ${{ github.event.inputs.name }}
+  AGE: ${{ github.event.inputs.age }}
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -37,4 +39,5 @@ jobs:
       - name: Check environment variables set
         run: |
           echo ${{ env.NAME }}
+          echo ${{ env.AGE }}
 
