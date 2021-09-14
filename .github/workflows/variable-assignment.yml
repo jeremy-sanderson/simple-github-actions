@@ -20,7 +20,7 @@ on:
     types: env
     
 env:
-  NAME: ${{ github.event?.inputs?.name || github.event.client_data.name }}
+  NAME: ${{ github.event.inputs.name || github.event.client_data.name }}
   AGE: ${{ github.event.inputs.age }}
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
