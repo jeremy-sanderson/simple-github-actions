@@ -21,7 +21,7 @@ on:
     
 env:
   NAME: ${{ github.event.inputs.name || github.event.client_payload.name }}
-  AGE: ${{ github.event.inputs.age  || github.event.client_payload.name }}
+  AGE: ${{ github.event.inputs.age  || github.event.client_payload.age }}
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
